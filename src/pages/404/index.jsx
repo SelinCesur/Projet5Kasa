@@ -1,8 +1,12 @@
+import Layout from '../../Components/Layout'
+
 function Error() {
   return (
-    <div>
-      <h1>Oups 🙈 Cette page n'existe pas</h1>
-    </div>
+    <Layout>
+      <div>
+        <h1>Oups 🙈 Cette page n'existe pas</h1>
+      </div>
+    </Layout>
   )
 }
 
