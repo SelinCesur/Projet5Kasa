@@ -1,0 +1,39 @@
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 45px;
+  margin-bottom: 50px;
+
+  nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        list-style-type: none;
+        margin-right: 77px;
+
+        a {
+          text-decoration: none;
+          color: black;
+
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 34.22px;
+          text-align: right;
+          &:hover {
+            border-bottom: 2px solid black;
+          }
+        }
+      }
+    }
+  }
+}
