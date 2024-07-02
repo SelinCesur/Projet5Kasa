@@ -1,0 +1,19 @@
+.card {
+  border-radius: 25px;
+  background: #ff6060;
+  padding: 20px;
+
+  min-height: 340px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+
+  h1 {
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 25.67px;
+    text-align: left;
+    color: #ffffff;
+  }
+}

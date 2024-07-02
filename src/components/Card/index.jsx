@@ -1,9 +1,8 @@
 import '../../Styles/Card.scss'
-function Card({ title, description }) {
+function Card({ title }) {
   return (
-    <div>
+    <div class="card">
       <h1>{title}</h1>
-      <p>{description}</p>
     </div>
   )
 }

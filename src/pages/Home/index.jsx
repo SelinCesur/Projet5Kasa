@@ -1,19 +1,21 @@
 import '../../Home.scss'
 import Layout from '../../Components/Layout'
 import Banner from '../../Components/Banner'
-import Card from '../../Components/Card/Card'
+import Card from '../../Components/Card'
 
 function Home() {
   return (
     <Layout>
       <div className="App">
         <Banner></Banner>
-        <Card title="Card 1" description="Description 1"></Card>
-        <Card title="Card 1" description="Description 1"></Card>
-        <Card title="Card 1" description="Description 1"></Card>
-        <Card title="Card 1" description="Description 1"></Card>
-        <Card title="Card 1" description="Description 1"></Card>
-        <Card title="Card 1" description="Description 1"></Card>
+        <div class="liste">
+          <Card title="Titre de la location"></Card>
+          <Card title="Titre de la location"></Card>
+          <Card title="Titre de la location"></Card>
+          <Card title="Titre de la location"></Card>
+          <Card title="Titre de la location"></Card>
+          <Card title="Titre de la location"></Card>
+        </div>
       </div>
     </Layout>
   )
