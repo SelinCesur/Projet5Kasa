@@ -1,8 +1,8 @@
 import '../../Styles/Card.scss'
-function Card({ title }) {
+function Card({ titre }) {
   return (
     <div class="card">
-      <h1>{title}</h1>
+      <h1>{titre}</h1>
     </div>
   )
 }

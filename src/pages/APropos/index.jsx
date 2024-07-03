@@ -1,15 +1,13 @@
 import Layout from '../../Components/Layout'
+import Banner from '../../Components/Banner'
+import Image2 from '../../Assets/imageSource2.png'
 
+import '../../Styles/APropos.scss'
 function APropos() {
   return (
     <Layout>
       <div>
-        <h1>A propos</h1>
-        <p>
-          Kasa est une plateforme de location de logements de particulier à
-          particulier. Elle a été créée en 2019 par une équipe de quatre
-          personnes.
-        </p>
+        <Banner image={Image2}></Banner>
       </div>
     </Layout>
   )

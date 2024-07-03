@@ -6,8 +6,10 @@ import '../../Styles/Layout.scss'
 function Layout({ children }) {
   return (
     <div class="layout">
-      <Header />
-      {children}
+      <div class="layout-margin">
+        <Header />
+        {children}
+      </div>
       <Footer />
     </div>
   )
