@@ -1,0 +1,27 @@
+.carrousel {
+  position: relative;
+
+  .fleche-gauche {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+  .fleche-droite {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 1;
+  }
+
+  img {
+    &.active {
+      display: block;
+    }
+    &.inactive {
+      display: none;
+    }
+  }
+}

@@ -1,9 +1,20 @@
+import { Link } from 'react-router-dom'
 import '../../Styles/Card.scss'
-function Card({ titre }) {
+function Card({ logement }) {
   return (
-    <div class="card">
-      <h1>{titre}</h1>
-    </div>
+    <Link to={`/fiche-logement/${logement.id}`}>
+      <div
+        class="card"
+        style={{
+          backgroundImage: `url(${logement.cover})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      >
+        <h1>{logement.title}</h1>
+      </div>
+    </Link>
   )
 }
 export default Card
