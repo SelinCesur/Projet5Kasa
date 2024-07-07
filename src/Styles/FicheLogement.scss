@@ -1,0 +1,28 @@
+.titre {
+  font-size: 36px;
+  font-weight: 500;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  color: #ff6060;
+}
+
+.location {
+  font-size: 18px;
+  font-weight: 500;
+  color: #000000;
+  margin-top: 0px;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin-top: 23px;
+  margin-bottom: 26px;
+}
+
+.description-et-equipement {
+  display: flex;
+  flex-direction: row;
+  gap: 76px;
+}
