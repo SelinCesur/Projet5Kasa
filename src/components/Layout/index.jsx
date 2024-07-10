@@ -5,8 +5,8 @@ import '../../Styles/Layout.scss'
 
 function Layout({ children }) {
   return (
-    <div class="layout">
-      <div class="layout-margin">
+    <div className="layout">
+      <div className="layout-margin">
         <Header />
         {children}
       </div>

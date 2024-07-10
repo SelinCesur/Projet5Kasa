@@ -17,12 +17,43 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+
   margin-top: 23px;
   margin-bottom: 26px;
 }
 
-.description-et-equipement {
+.flex {
   display: flex;
   flex-direction: row;
-  gap: 76px;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 96px;
+
+  .contenu {
+    width: 50%;
+
+    .etoiles {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+}
+
+.host {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  .nom {
+    font-size: 18px;
+    font-weight: 500;
+    color: #ff6060;
+    display: flex;
+    align-items: center;
+  }
+
+  .photo {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+  }
 }

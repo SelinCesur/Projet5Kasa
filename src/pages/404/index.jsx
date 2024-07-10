@@ -5,9 +5,9 @@ import '../../Styles/404.scss'
 function Error() {
   return (
     <Layout>
-      <div class="error">
-        <h2 class="noexiste">404</h2>
-        <strong class="message">
+      <div className="error">
+        <h2 className="noexiste">404</h2>
+        <strong className="message">
           Oups! La page que vous demandez n'existe pas.
         </strong>
         <Link to="/">Retourner sur la page d'accueil</Link>

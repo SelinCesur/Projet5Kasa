@@ -11,7 +11,7 @@ function Home() {
     <Layout>
       <div className="App">
         <Banner titre="Chez vous, partout et ailleurs" image={Image1}></Banner>
-        <div class="liste">
+        <div className="liste">
           {listeDesLogements.map((logement) => (
             <Card logement={logement}></Card>
           ))}

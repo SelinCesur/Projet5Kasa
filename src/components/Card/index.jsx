@@ -4,7 +4,7 @@ function Card({ logement }) {
   return (
     <Link to={`/fiche-logement/${logement.id}`}>
       <div
-        class="card"
+        className="card"
         style={{
           backgroundImage: `url(${logement.cover})`,
           backgroundSize: 'cover',

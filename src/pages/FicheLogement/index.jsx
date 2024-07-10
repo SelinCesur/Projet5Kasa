@@ -4,6 +4,7 @@ import '../../Styles/FicheLogement.scss'
 import LogementsJson from '../../Data/logements.json'
 import Tag from '../../Components/Tag'
 import Collapse from '../../Components/Collapse'
+import Etoile from '../../Components/Etoile'
 
 function RetournerLogement(id) {
   return LogementsJson.find((logement) => logement.id === id)
@@ -23,29 +24,55 @@ function FicheLogement() {
         pictures={logement.pictures}
       ></Carrousel>
 
-      <p className="titre">{logement.title}</p>
-      <p className="location">{logement.location}</p>
-      <div className="tags">
-        {logement.tags.map((tag) => (
-          <Tag>{tag}</Tag>
-        ))}
+      <div className="flex">
+        <div className="contenu">
+          <p className="titre">{logement.title}</p>
+          <p className="location">{logement.location}</p>
+        </div>
+        <div className="contenu">
+          <div className="host">
+            <span class="nom">{logement.host.name}</span>
+            <img
+              class="photo"
+              src={logement.host.picture}
+              alt={logement.host.name}
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="description-et-equipement">
-        <div className="description">
-          <Collapse titre="Description" type="description">
-            {logement.description}
-          </Collapse>
+      <div className="flex">
+        <div className="contenu">
+          <div className="tags">
+            {logement.tags.map((tag) => (
+              <Tag>{tag}</Tag>
+            ))}
+          </div>
+        </div>
+        <div className="contenu">
+          <div className="etoiles">{<Etoile rating={logement.rating} />}</div>
+        </div>
+      </div>
+
+      <div className="flex">
+        <div className="contenu">
+          <div className="description">
+            <Collapse titre="Description" type="description">
+              {logement.description}
+            </Collapse>
+          </div>
         </div>
 
-        <div className="equipments">
-          <Collapse titre="Équipements" type="equipements">
-            <ul>
-              {logement.equipments.map((equipment) => (
-                <li>{equipment}</li>
-              ))}
-            </ul>
-          </Collapse>
+        <div className="contenu">
+          <div className="equipments">
+            <Collapse titre="Équipements" type="equipements">
+              <ul>
+                {logement.equipments.map((equipment) => (
+                  <li>{equipment}</li>
+                ))}
+              </ul>
+            </Collapse>
+          </div>
         </div>
       </div>
     </Layout>
