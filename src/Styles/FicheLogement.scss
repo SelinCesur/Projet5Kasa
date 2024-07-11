@@ -35,6 +35,7 @@
     .etoiles {
       display: flex;
       justify-content: flex-end;
+      gap: 10px;
     }
   }
 }
@@ -49,11 +50,47 @@
     color: #ff6060;
     display: flex;
     align-items: center;
+    width: 93px;
+    display: flex;
   }
 
   .photo {
     width: 64px;
     height: 64px;
     border-radius: 50%;
+  }
+}
+
+@media (max-width: 1200px) {
+  .titre {
+    font-size: 18px;
+  }
+
+  .flex {
+    gap: 48px;
+    flex-direction: column;
+
+    .contenu {
+      width: 100%;
+    }
+    .etoiles {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+  }
+
+  .host {
+    gap: 10.5px;
+    flex-direction: column;
+    align-items: flex-end;
+
+    .nom {
+      font-size: 12px;
+    }
+
+    .photo {
+      width: 32px;
+      height: 32px;
+    }
   }
 }

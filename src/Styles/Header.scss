@@ -5,6 +5,11 @@ header {
   margin-top: 45px;
   margin-bottom: 50px;
 
+  .logo {
+    width: 210px;
+    height: 68px;
+  }
+
   nav {
     display: flex;
     flex-direction: row;
@@ -19,7 +24,7 @@ header {
 
       li {
         list-style-type: none;
-        margin-right: 77px;
+        margin-left: 77px;
 
         a {
           text-decoration: none;
@@ -31,6 +36,28 @@ header {
           text-align: right;
           &:hover {
             border-bottom: 2px solid black;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  header {
+    .logo {
+      width: 145px;
+      height: 46px;
+    }
+    nav {
+      ul {
+        padding: 0px;
+        li {
+          margin: auto;
+          a {
+            margin-right: 43px;
+            font-size: 12px;
+            text-transform: uppercase;
           }
         }
       }

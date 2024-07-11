@@ -12,3 +12,9 @@
   margin-top: 43px;
   background-color: #f6f6f6;
 }
+
+@media (max-width: 1200px) {
+  .liste {
+    grid-template-columns: 1fr;
+  }
+}

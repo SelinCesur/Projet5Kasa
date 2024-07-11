@@ -13,4 +13,23 @@ footer {
   img {
     margin-bottom: 28.56px;
   }
+
+  .text {
+    display: flex;
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 1200px) {
+  footer {
+    .text {
+      flex-direction: column;
+      size: 12px;
+
+      p {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+    }
+  }
 }

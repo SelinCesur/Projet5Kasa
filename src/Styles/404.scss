@@ -28,3 +28,27 @@
     color: #000000;
   }
 }
+
+@media (max-width: 1200px) {
+  .error {
+    gap: 100px;
+
+    .noexiste {
+      font-size: 198px;
+      line-height: 136.9px;
+    }
+
+    .message {
+      font-size: 18px;
+      line-height: 25.67px;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+
+    a {
+      font-size: 14px;
+      line-height: 19.96px;
+    }
+  }
+}

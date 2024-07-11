@@ -10,7 +10,10 @@ function Footer() {
         width={122}
         height={39.44}
       />
-      <p>© 2020 Kasa. All rights reserved</p>
+      <div class="text">
+        <p>© 2020 Kasa. All</p>
+        <p>rights reserved</p>
+      </div>
     </footer>
   )
 }
