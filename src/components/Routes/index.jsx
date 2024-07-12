@@ -13,7 +13,6 @@ function RoutesComponent() {
         <Route path="/a-propos" element={<APropos />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      f
     </Router>
   )
 }

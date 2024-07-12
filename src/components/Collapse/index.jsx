@@ -4,17 +4,20 @@ import VectorOuvrir from '../../Assets/VectorO.png'
 
 function Collapse({ titre, children, type }) {
   const activer = () => {
+    console.log('click')
     const collapseContent = document.querySelector(
       `.collapse.${type} .collapse-content`,
     )
     const collapseHeader = document.querySelector(
       `.collapse.${type} .collapse-header img`,
     )
-    if (collapseContent.style.display === 'none') {
-      collapseContent.style.display = 'block'
+    // si desactiver est present, on le remplace par activer
+    if (collapseContent.classList.contains('desactiver')) {
+      collapseContent.classList.replace('desactiver', 'activer')
       collapseHeader.src = VectorOuvrir
     } else {
-      collapseContent.style.display = 'none'
+      // sinon on remplace activer par desactiver
+      collapseContent.classList.replace('activer', 'desactiver')
       collapseHeader.src = VectorFermer
     }
   }
@@ -23,9 +26,9 @@ function Collapse({ titre, children, type }) {
     <div className={'collapse ' + type}>
       <div className="collapse-header">
         <h2>{titre}</h2>
-        <img onClick={activer} src={VectorOuvrir} alt="VectorOuvrir" />
+        <img onClick={activer} src={VectorFermer} alt="VectorFermer" />
       </div>
-      <div className="collapse-content">{children}</div>
+      <div className="collapse-content desactiver">{children}</div>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import LogementsJson from '../../Data/logements.json'
 import Tag from '../../Components/Tag'
 import Collapse from '../../Components/Collapse'
 import Etoile from '../../Components/Etoile'
+import { useNavigate } from 'react-router-dom'
 
 function RetournerLogement(id) {
   return LogementsJson.find((logement) => logement.id === id)
@@ -16,6 +17,13 @@ function FicheLogement() {
 
   // récupérer les informations du logement à afficher à partir de son id - id, title, cover, pictures, description, host, rating, location, equipments, tags
   const logement = RetournerLogement(idFicheLogement)
+
+  // si le logement n'existe pas, rediriger vers la page 404
+  const navigate = useNavigate()
+  if (!logement) {
+    navigate('/404', { replace: true })
+  }
+
   console.log(logement)
   return (
     <Layout>
@@ -25,33 +33,31 @@ function FicheLogement() {
       ></Carrousel>
 
       <div className="flex">
-        <div className="contenu">
+        {/* titre et location */}
+        <div className="titre-et-location">
           <p className="titre">{logement.title}</p>
           <p className="location">{logement.location}</p>
         </div>
-        <div className="contenu">
-          <div className="host">
-            <span class="nom">{logement.host.name}</span>
-            <img
-              class="photo"
-              src={logement.host.picture}
-              alt={logement.host.name}
-            />
-          </div>
-        </div>
-      </div>
 
-      <div className="flex">
-        <div className="contenu">
-          <div className="tags">
-            {logement.tags.map((tag) => (
-              <Tag>{tag}</Tag>
-            ))}
-          </div>
+        {/* host */}
+        <div className="host">
+          <span class="nom">{logement.host.name}</span>
+          <img
+            class="photo"
+            src={logement.host.picture}
+            alt={logement.host.name}
+          />
         </div>
-        <div className="contenu">
-          <div className="etoiles">{<Etoile rating={logement.rating} />}</div>
+
+        {/* tags */}
+        <div className="tags">
+          {logement.tags.map((tag) => (
+            <Tag>{tag}</Tag>
+          ))}
         </div>
+
+        {/* etoiles */}
+        <div className="etoiles">{<Etoile rating={logement.rating} />}</div>
       </div>
 
       <div className="flex">
