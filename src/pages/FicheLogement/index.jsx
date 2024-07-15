@@ -5,7 +5,7 @@ import LogementsJson from '../../Data/logements.json'
 import Tag from '../../Components/Tag'
 import Collapse from '../../Components/Collapse'
 import Etoile from '../../Components/Etoile'
-import { useNavigate } from 'react-router-dom'
+import { Navigate } from 'react-router-dom'
 
 function RetournerLogement(id) {
   return LogementsJson.find((logement) => logement.id === id)
@@ -19,9 +19,10 @@ function FicheLogement() {
   const logement = RetournerLogement(idFicheLogement)
 
   // si le logement n'existe pas, rediriger vers la page 404
-  const navigate = useNavigate()
-  if (!logement) {
-    navigate('/404', { replace: true })
+
+  const isValidId = logement !== undefined
+  if (!isValidId) {
+    return <Navigate to="/404" />
   }
 
   console.log(logement)
