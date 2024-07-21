@@ -1,19 +1,41 @@
 .card {
-  border-radius: 25px;
-  background: #ff6060;
-  padding: 20px;
-
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px; // Optionn
   min-height: 340px;
 
   display: flex;
-  flex-direction: column;
-  justify-content: end;
+  justify-content: flex-start;
+  align-items: flex-end;
 
-  h1 {
-    font-size: 18px;
-    font-weight: 700;
-    line-height: 25.67px;
-    text-align: left;
-    color: #ffffff;
+  .card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Assure que l'image couvre la carte sans être déformée
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(10, 10, 10, 0) 42%,
+      rgba(4, 4, 4, 0.205) 99.99%,
+      rgba(0, 0, 0, 0.5) 100%
+    );
   }
+
+  .card-content {
+    position: relative;
+    color: white; // Changez selon le besoin pour contraster avec l'image de fond
+    padding: 10px; // Ajustez selon le besoin
+  }
+}
+
+h1 {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 25.67px;
+  text-align: left;
+  color: #ffffff;
+  text-decoration: none;
 }
