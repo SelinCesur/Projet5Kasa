@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-import Home from '../../Pages/Home'
-import APropos from '../../Pages/APropos'
-import FicheLogement from '../../Pages/FicheLogement'
-import Error from '../../Pages/404'
+import Home from '../../Pages/Home/Home'
+import APropos from '../../Pages/APropos/APropos'
+import FicheLogement from '../../Pages/FicheLogement/FicheLogement'
+import Error from '../../Pages/404/404'
 
 function RoutesComponent() {
   return (

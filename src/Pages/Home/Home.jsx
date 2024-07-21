@@ -1,7 +1,7 @@
-import '../../Home.scss'
-import Layout from '../../Components/Layout'
-import Banner from '../../Components/Banner'
-import Card from '../../Components/Card'
+import './Home.scss'
+import Layout from '../../Components/Layout/Layout'
+import Banner from '../../Components/Banner/Banner'
+import Card from '../../Components/Card/Card'
 import Image1 from '../../Assets/imageSource1.png'
 import LogementsJson from '../../Data/logements.json'
 

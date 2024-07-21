@@ -1,4 +1,4 @@
-import '../../Styles/Tag.scss'
+import './Tag.scss'
 
 function Tag({ children }) {
   return (

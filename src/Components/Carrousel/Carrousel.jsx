@@ -1,6 +1,6 @@
 import VectorGauche from '../../Assets/VectorG.png'
 import VectorDroite from '../../Assets/VectorD.png'
-import '../../Styles/Carrousel.scss'
+import './Carrousel.scss'
 import React, { useState } from 'react'
 
 function CarrouselPrécédent(index, tailleMax) {

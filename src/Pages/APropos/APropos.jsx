@@ -1,9 +1,9 @@
-import Layout from '../../Components/Layout'
-import Banner from '../../Components/Banner'
+import Layout from '../../Components/Layout/Layout'
+import Banner from '../../Components/Banner/Banner'
 import Image2 from '../../Assets/imageSource2.png'
 
-import '../../Styles/APropos.scss'
-import Collapse from '../../Components/Collapse'
+import './APropos.scss'
+import Collapse from '../../Components/Collapse/Collapse'
 
 function APropos() {
   return (

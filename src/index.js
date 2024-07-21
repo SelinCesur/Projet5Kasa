@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css'
 
 import reportWebVitals from './reportWebVitals'
-import RoutesComponent from './Components/Routes'
+import RoutesComponent from './Components/Routes/Routes'
 
 const root = ReactDOM.createRoot(document.getElementById('root'))
 

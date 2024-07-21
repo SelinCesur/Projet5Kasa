@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import '../../Styles/Card.scss'
+import './Card.scss'
 function Card({ logement }) {
   return (
     <Link to={`/fiche-logement/${logement.id}`}>

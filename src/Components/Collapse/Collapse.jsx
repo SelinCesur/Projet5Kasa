@@ -1,10 +1,9 @@
-import '../../Styles/Collapse.scss'
+import './Collapse.scss'
 import VectorFermer from '../../Assets/VectorF.png'
 import VectorOuvrir from '../../Assets/VectorO.png'
 
 function Collapse({ titre, children, type }) {
   const activer = () => {
-    console.log('click')
     const collapseContent = document.querySelector(
       `.collapse.${type} .collapse-content`,
     )

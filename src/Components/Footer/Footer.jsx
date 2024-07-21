@@ -1,4 +1,4 @@
-import '../../Styles/Footer.scss'
+import './Footer.scss'
 import logo from '../../Assets/LogoKasaNoir.png'
 
 function Footer() {

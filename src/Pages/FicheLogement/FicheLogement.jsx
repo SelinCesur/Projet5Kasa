@@ -1,10 +1,10 @@
-import Layout from '../../Components/Layout'
-import Carrousel from '../../Components/Carrousel'
-import '../../Styles/FicheLogement.scss'
+import Layout from '../../Components/Layout/Layout'
+import Carrousel from '../../Components/Carrousel/Carrousel'
+import './FicheLogement.scss'
 import LogementsJson from '../../Data/logements.json'
-import Tag from '../../Components/Tag'
-import Collapse from '../../Components/Collapse'
-import Etoile from '../../Components/Etoile'
+import Tag from '../../Components/Tag/Tag'
+import Collapse from '../../Components/Collapse/Collapse'
+import Etoile from '../../Components/Etoile/Etoile'
 import { Navigate } from 'react-router-dom'
 
 function RetournerLogement(id) {

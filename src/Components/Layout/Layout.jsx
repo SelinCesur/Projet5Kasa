@@ -1,7 +1,7 @@
-import Footer from '../Footer'
-import Header from '../Header'
+import Footer from '../Footer/Footer'
+import Header from '../Header/Header'
 
-import '../../Styles/Layout.scss'
+import './Layout.scss'
 
 function Layout({ children }) {
   return (

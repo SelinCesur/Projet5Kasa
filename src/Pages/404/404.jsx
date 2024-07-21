@@ -1,7 +1,7 @@
-import Layout from '../../Components/Layout'
+import Layout from '../../Components/Layout/Layout'
 
 import { Link } from 'react-router-dom'
-import '../../Styles/404.scss'
+import './404.scss'
 function Error() {
   return (
     <Layout>
