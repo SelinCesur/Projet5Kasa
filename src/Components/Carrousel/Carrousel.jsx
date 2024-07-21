@@ -35,6 +35,7 @@ function Carrousel({ title, pictures }) {
         ) => (
           <img
             src={image}
+            key={index} // key permet d'identifier chaque élément de la liste
             className={index === indexCarrousel ? 'active' : 'inactive'} // affiche l'image active ou inactive en fonction de l'index
             alt={title}
           ></img>

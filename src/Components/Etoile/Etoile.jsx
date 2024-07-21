@@ -9,10 +9,10 @@ function notation(rating) {
   for (let i = 1; i <= maxRating; i++) {
     if (i <= rating) {
       // si i est inférieur ou égal à rating, on affiche une étoile rouge, sinon une étoile grise
-      etoiles.push(<img src={EtoileRouge} alt="etoile" />)
+      etoiles.push(<img src={EtoileRouge} key={i} alt="etoile" />)
     } else {
       // sinon on affiche une étoile grise
-      etoiles.push(<img src={EtoileGris} alt="etoile" />)
+      etoiles.push(<img src={EtoileGris} key={i} alt="etoile" />)
     }
   }
 

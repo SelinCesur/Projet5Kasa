@@ -25,7 +25,6 @@ function FicheLogement() {
     return <Navigate to="/404" />
   }
 
-  console.log(logement)
   return (
     <Layout>
       <Carrousel
@@ -42,9 +41,9 @@ function FicheLogement() {
 
         {/* host */}
         <div className="host">
-          <span class="nom">{logement.host.name}</span>
+          <span className="nom">{logement.host.name}</span>
           <img
-            class="photo"
+            className="photo"
             src={logement.host.picture}
             alt={logement.host.name}
           />
@@ -52,8 +51,8 @@ function FicheLogement() {
 
         {/* tags */}
         <div className="tags">
-          {logement.tags.map((tag) => (
-            <Tag>{tag}</Tag>
+          {logement.tags.map((tag, index) => (
+            <Tag key={index}>{tag}</Tag>
           ))}
         </div>
 
@@ -74,8 +73,8 @@ function FicheLogement() {
           <div className="equipments">
             <Collapse titre="Équipements" type="equipements">
               <ul>
-                {logement.equipments.map((equipment) => (
-                  <li>{equipment}</li>
+                {logement.equipments.map((equipment, index) => (
+                  <li key={index}>{equipment}</li>
                 ))}
               </ul>
             </Collapse>

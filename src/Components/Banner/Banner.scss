@@ -28,15 +28,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
+    h1 {
+      color: white;
+
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 68.45px;
+    }
   }
-}
-
-h1 {
-  color: white;
-
-  font-size: 48px;
-  font-weight: 700;
-  line-height: 68.45px;
 }
 
 @media (max-width: 1200px) {

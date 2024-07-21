@@ -13,7 +13,7 @@ function Home() {
         <Banner titre="Chez vous, partout et ailleurs" image={Image1}></Banner>
         <div className="liste">
           {listeDesLogements.map((logement) => (
-            <Card logement={logement}></Card>
+            <Card logement={logement} key={logement.id}></Card>
           ))}
         </div>
       </div>
